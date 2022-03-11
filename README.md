@@ -42,3 +42,33 @@ This project consists of the following Deliverables :
 2. Deliverable 2: Compile, Train, and Evaluate the Model
 3. Deliverable 3: Optimize the Model
 4. Deliverable 4: A Written Report on the Neural Network Model (README.md)
+
+
+### 1. Deliverable 1: Preprocessing Data for a Neural Network Model
+1. Read in the charity_data.csv to a Pandas DataFrame, and be sure to identify the following in the dataset:
+ - What variable(s) are considered the target(s) for your model?
+ - What variable(s) are considered the feature(s) for your model?
+2. Drop the EIN and NAME columns.
+3. Determine the number of unique values for each column.
+4. For those columns that have more than 10 unique values, determine the number of data points for each unique value.
+5. Create a density plot to determine the distribution of the column values.
+6. Use the density plot to create a cutoff point to bin "rare" categorical variables together in a new column, Other, and then check if the binning was successful.
+7. Generate a list of categorical variables.
+8. Encode categorical variables using one-hot encoding, and place the variables in a new DataFrame.
+9. Merge the one-hot encoding DataFrame with the original DataFrame, and drop the originals.
+10. Split the preprocessed data into features and target arrays.
+11. Split the preprocessed data into training and testing datasets.
+12. Standardize numerical variables using Scikit-Learn’s StandardScaler class, then scale the data.
+
+
+
+### 2. Delverable 2: Compile, Train, and Evaluate the Model
+Using your knowledge of TensorFlow, you’ll design a neural network, or deep learning model, to create a binary classification model that can predict if an Alphabet Soup–funded organization will be successful based on the features in the dataset. You’ll need to think about how many inputs there are before determining the number of neurons and layers in your model. Once you’ve completed that step, you’ll compile, train, and evaluate your binary classification model to calculate the model’s loss and accuracy.
+
+
+
+
+
+
+### 3. Deliverable 3: Optimize the Model
+Using your knowledge of TensorFlow, optimize your model in order to achieve a target predictive accuracy higher than 75%. If you can't achieve an accuracy higher than 75%, you'll need to make at least three attempts to do so.
