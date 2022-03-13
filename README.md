@@ -3,7 +3,7 @@
 
 
 ## Background
-Tex is a data scientist and programmer for the non-profit foundation, 'Alphabet Soup'. They are full enthropic foundation dedicated to helping organizations that protect the environment, improve people's well being and unify the world. Alphabet Soup has raised and donated over 10 billion dollars in the past 20 years. This money has been used to invest in life saving technologies and organize reforce station groups around the world . bex is responsible for data collection and anlaysis for the entire organization. Her job is to analyze the impact of each donation and vet potential recipients. This helps ensure that the foundation money is being used effectively. Unfortunately, not every donation that the company makes is impactful. In some cases an organization will take the money and disappear. As a result, the president of 'Alphabet Soups' Andy Glad, has asked Bex to predict which organizations are worth donating to and which ones are high risk. He wants her to create a mathematical data driven solution that can do this accurately. Bex has this idea that this problem is too complex for the statistical and machine learning models that she has used. Instead she will design and train a deep learning neural network. This model will evaluate all types of input data and produce a clear decision making result. I am going to help Bex learn about Neural Networks and how to design and train these models using the python TensorFlow Libraries. We will then test and optimize the models using statistics and and machine learning. We will create a robust and deep learning neural network capable of interpreting large and complex datasets. This will help Bex and Alphabet Soup decide which organizations should receive donations. 
+Bex is a data scientist and programmer for the non-profit foundation, 'Alphabet Soup'. They are full enthropic foundation dedicated to helping organizations that protect the environment, improve people's well being and unify the world. Alphabet Soup has raised and donated over 10 billion dollars in the past 20 years. This money has been used to invest in life saving technologies and organize reforce station groups around the world . bex is responsible for data collection and anlaysis for the entire organization. Her job is to analyze the impact of each donation and vet potential recipients. This helps ensure that the foundation money is being used effectively. Unfortunately, not every donation that the company makes is impactful. In some cases an organization will take the money and disappear. As a result, the president of 'Alphabet Soups' Andy Glad, has asked Bex to predict which organizations are worth donating to and which ones are high risk. He wants her to create a mathematical data driven solution that can do this accurately. Bex has this idea that this problem is too complex for the statistical and machine learning models that she has used. Instead she will design and train a deep learning neural network. This model will evaluate all types of input data and produce a clear decision making result. I am going to help Bex learn about Neural Networks and how to design and train these models using the python TensorFlow Libraries. We will then test and optimize the models using statistics and and machine learning. We will create a robust and deep learning neural network capable of interpreting large and complex datasets. This will help Bex and Alphabet Soup decide which organizations should receive donations. 
 
 ![1](https://user-images.githubusercontent.com/23488019/157788996-5130eb23-b24b-44c1-9bd8-92ec1db19632.PNG)
 ![2](https://user-images.githubusercontent.com/23488019/157789004-8726abb2-68aa-430b-b57f-9c2b21426fc9.PNG)
@@ -47,28 +47,86 @@ This project consists of the following Deliverables :
 ### 1. Deliverable 1: Preprocessing Data for a Neural Network Model
 1. Read in the charity_data.csv to a Pandas DataFrame, and be sure to identify the following in the dataset:
  - What variable(s) are considered the target(s) for your model?
+ The variable IS_SUCCESSFUL was considered as the taget for our model.
  - What variable(s) are considered the feature(s) for your model?
-2. Drop the EIN and NAME columns.
+ The variables considered as the features of our model are :
+- AFFILIATION
+- APPLICATION_TYPE
+- ASK_AMT
+- CLASSIFICATION
+- INCOME_AMT
+- ORGANIZATION
+- SPECIAL_CONSIDERATIONS
+- STATUS
+- USE_CASE
+![11](https://user-images.githubusercontent.com/23488019/158046023-caafa1f7-9efb-4f98-8bfe-04678ab0784c.PNG)
+
+2. Dropping the EIN and NAME columns since both these columns do not affect the success or the failure rate. 
 3. Determine the number of unique values for each column.
+
+![12](https://user-images.githubusercontent.com/23488019/158046030-19cc2e1c-24ce-49f5-b5d0-4c602bbf61ac.PNG)
+
 4. For those columns that have more than 10 unique values, determine the number of data points for each unique value.
+
+![13](https://user-images.githubusercontent.com/23488019/158046060-d985a2d5-2394-4d92-abed-e98dff20b449.PNG)
+
 5. Create a density plot to determine the distribution of the column values.
 6. Use the density plot to create a cutoff point to bin "rare" categorical variables together in a new column, Other, and then check if the binning was successful.
+![14](https://user-images.githubusercontent.com/23488019/158046070-61322244-b4cb-46db-9c80-45184eda953a.PNG)
+![15](https://user-images.githubusercontent.com/23488019/158046074-f32b06e0-1291-414e-bb1d-7105c3be5b0e.PNG)
+![16](https://user-images.githubusercontent.com/23488019/158046078-61ef1a0e-c58f-4ff9-88c8-59e1652f91ca.PNG)
+
 7. Generate a list of categorical variables.
 8. Encode categorical variables using one-hot encoding, and place the variables in a new DataFrame.
 9. Merge the one-hot encoding DataFrame with the original DataFrame, and drop the originals.
+![17](https://user-images.githubusercontent.com/23488019/158046082-894a4fc6-35cb-480b-84ef-ff44c2934f6a.PNG)
+
 10. Split the preprocessed data into features and target arrays.
 11. Split the preprocessed data into training and testing datasets.
+![18](https://user-images.githubusercontent.com/23488019/158046086-16df65c5-5466-4927-adec-7eeabb43a746.PNG)
+
 12. Standardize numerical variables using Scikit-Learn’s StandardScaler class, then scale the data.
 
 
 
 ### 2. Delverable 2: Compile, Train, and Evaluate the Model
-Using your knowledge of TensorFlow, you’ll design a neural network, or deep learning model, to create a binary classification model that can predict if an Alphabet Soup–funded organization will be successful based on the features in the dataset. You’ll need to think about how many inputs there are before determining the number of neurons and layers in your model. Once you’ve completed that step, you’ll compile, train, and evaluate your binary classification model to calculate the model’s loss and accuracy.
+Using TensorFlow, we will design a neural network, or deep learning model, to create a binary classification model that can predict if an Alphabet Soup–funded organization will be successful based on the features in the dataset. For this we need to think about how many inputs there are before determining the number of neurons and layers in the model. Later we will compile, train, and evaluate the binary classification model to calculate the model’s loss and accuracy. The steps involved in this process are shown below:
+- Create a neural network model by assigning the number of input features and nodes for each layer using Tensorflow Keras.
 
+![21](https://user-images.githubusercontent.com/23488019/158045613-390db02b-5960-4b11-a922-f74bb5e99b08.PNG)
 
+- Create the first hidden layer and choose an appropriate activation function.
+- If necessary, add a second hidden layer with an appropriate activation function.
+- Create an output layer with an appropriate activation function.
+- Check the structure of the model.
+- Compile and train the model.
 
+![22](https://user-images.githubusercontent.com/23488019/158045617-901a0d91-fcc9-422d-8dfb-587ba12d79a0.PNG)
 
+- Create a callback that saves the model's weights every 5 epochs.
+- Evaluate the model using the test data to determine the loss and accuracy.
+
+![23](https://user-images.githubusercontent.com/23488019/158045619-890c5454-ffb6-4cf8-bb6c-4e0c6c233653.PNG)
+
+- Save and export  results to an HDF5 file, and name it AlphabetSoupCharity.h5.
+Hence, the neural network model using Tensorflow Keras performs the following steps:
+- The number of layers, the number of neurons per layer, and activation function are defined 
+- An output layer with an activation function is created 
+- There is an output for the structure of the model 
+- There is an output of the model’s loss and accuracy 
+- The model's weights are saved every 5 epochs 
+- The results are saved to an HDF5 file 
 
 
 ### 3. Deliverable 3: Optimize the Model
-Using your knowledge of TensorFlow, optimize your model in order to achieve a target predictive accuracy higher than 75%. If you can't achieve an accuracy higher than 75%, you'll need to make at least three attempts to do so.
+Using TensorFlow, we will optimize our model in order to achieve a target predictive accuracy higher than 75%. If we can't achieve an accuracy higher than 75%, then we will make at least three attempts to do so.
+
+This deliverable can be achieved by doing any or all of the following steps:
+1. Adjusting the input data to ensure that there are no variables or outliers that are causing confusion in the model, such as:
+ - Dropping more or fewer columns.
+ - Creating more bins for rare occurrences in columns.
+ - Increasing or decreasing the number of values for each bin.
+2. Adding more neurons to a hidden layer.
+3. Adding more hidden layers.
+4. Using different activation functions for the hidden layers.
+5. Adding or reducing the number of epochs to the training regimen.
