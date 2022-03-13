@@ -1,7 +1,6 @@
 # Neural_Network_Charity_Analysis
 
 
-
 ## Background
 Bex is a data scientist and programmer for the non-profit foundation, 'Alphabet Soup'. They are full enthropic foundation dedicated to helping organizations that protect the environment, improve people's well being and unify the world. Alphabet Soup has raised and donated over 10 billion dollars in the past 20 years. This money has been used to invest in life saving technologies and organize reforce station groups around the world . bex is responsible for data collection and anlaysis for the entire organization. Her job is to analyze the impact of each donation and vet potential recipients. This helps ensure that the foundation money is being used effectively. Unfortunately, not every donation that the company makes is impactful. In some cases an organization will take the money and disappear. As a result, the president of 'Alphabet Soups' Andy Glad, has asked Bex to predict which organizations are worth donating to and which ones are high risk. He wants her to create a mathematical data driven solution that can do this accurately. Bex has this idea that this problem is too complex for the statistical and machine learning models that she has used. Instead she will design and train a deep learning neural network. This model will evaluate all types of input data and produce a clear decision making result. I am going to help Bex learn about Neural Networks and how to design and train these models using the python TensorFlow Libraries. We will then test and optimize the models using statistics and and machine learning. We will create a robust and deep learning neural network capable of interpreting large and complex datasets. This will help Bex and Alphabet Soup decide which organizations should receive donations. 
 
@@ -36,7 +35,7 @@ From Alphabet Soup’s business team, Beks received a CSV containing more than 3
 - ASK_AMT—Funding amount requested
 - IS_SUCCESSFUL—Was the money used effectively
 
-## What I am Creating:
+## Purpose - What I am Creating:
 This project consists of the following Deliverables :
 1. Deliverable 1: Preprocessing Data for a Neural Network Model
 2. Deliverable 2: Compile, Train, and Evaluate the Model
@@ -45,20 +44,8 @@ This project consists of the following Deliverables :
 
 
 ### 1. Deliverable 1: Preprocessing Data for a Neural Network Model
-1. Read in the charity_data.csv to a Pandas DataFrame, and be sure to identify the following in the dataset:
- - What variable(s) are considered the target(s) for your model?
- The variable IS_SUCCESSFUL was considered as the taget for our model.
- - What variable(s) are considered the feature(s) for your model?
- The variables considered as the features of our model are :
-- AFFILIATION
-- APPLICATION_TYPE
-- ASK_AMT
-- CLASSIFICATION
-- INCOME_AMT
-- ORGANIZATION
-- SPECIAL_CONSIDERATIONS
-- STATUS
-- USE_CASE
+1. Read in the charity_data.csv to a Pandas DataFrame
+ 
 ![11](https://user-images.githubusercontent.com/23488019/158046023-caafa1f7-9efb-4f98-8bfe-04678ab0784c.PNG)
 
 2. Dropping the EIN and NAME columns since both these columns do not affect the success or the failure rate. 
@@ -130,3 +117,38 @@ This deliverable can be achieved by doing any or all of the following steps:
 3. Adding more hidden layers.
 4. Using different activation functions for the hidden layers.
 5. Adding or reducing the number of epochs to the training regimen.
+
+
+## Results :
+
+#### A. Data Preprocessing - 
+1. What variable(s) are considered the target(s) for your model?
+   The variable that was considered as the target for our model was the IS_SUCCESSFUL column.
+
+2. What variable(s) are considered to be the features for your model?
+   The features of my model are:
+   - AFFILIATION
+   - APPLICATION_TYPE
+   - ASK_AMT
+   - CLASSIFICATION
+   - INCOME_AMT
+   - ORGANIZATION
+   - SPECIAL_CONSIDERATIONS
+   - STATUS
+   - USE_CASE
+   
+3. What variable(s) are neither targets nor features, and should be removed from the input data?
+   The "NAME" and "EIN" variables do not affect the success or the failure rate and hence are dropped out of the table.
+   
+   
+#### B. Compiling, Training, and Evaluating the Model - 
+1. How many neurons, layers, and activation functions did you select for your neural network model, and why?
+
+2. Were you able to achieve the target model performance?
+
+
+3. What steps did you take to try and increase model performance?
+
+
+## Summary
+Summarize the overall results of the deep learning model. Include a recommendation for how a different model could solve this classification problem, and explain your recommendation.
