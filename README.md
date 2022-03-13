@@ -152,3 +152,8 @@ This deliverable can be achieved by doing any or all of the following steps:
 
 ## Summary
 Summarize the overall results of the deep learning model. Include a recommendation for how a different model could solve this classification problem, and explain your recommendation.
+
+
+## References
+1. https://courses.bootcampspot.com/courses/791/pages/19-dot-1-1-what-is-a-neural-network?module_item_id=303929
+2. 
