@@ -107,6 +107,7 @@ Hence, the neural network model using Tensorflow Keras performs the following st
 
 ### 3. Deliverable 3: Optimize the Model
 Using TensorFlow, we will optimize our model in order to achieve a target predictive accuracy higher than 75%. If we can't achieve an accuracy higher than 75%, then we will make at least three attempts to do so.
+![31](https://user-images.githubusercontent.com/23488019/158086478-bf171e3b-6ea7-4038-af9a-796bc9365a68.PNG)
 
 This deliverable can be achieved by doing any or all of the following steps:
 1. Adjusting the input data to ensure that there are no variables or outliers that are causing confusion in the model, such as:
@@ -117,6 +118,11 @@ This deliverable can be achieved by doing any or all of the following steps:
 3. Adding more hidden layers.
 4. Using different activation functions for the hidden layers.
 5. Adding or reducing the number of epochs to the training regimen.
+
+![33](https://user-images.githubusercontent.com/23488019/158086488-aa6bca9b-7894-4264-b3f1-6aff9331646b.PNG)
+![34](https://user-images.githubusercontent.com/23488019/158086489-c2e97d8a-9c87-4209-8c94-3d69ae76e635.PNG)
+![35](https://user-images.githubusercontent.com/23488019/158086490-ef64f222-f5ab-4430-8692-337bcd296713.PNG)
+![36](https://user-images.githubusercontent.com/23488019/158086493-c554f1f0-3699-4b3f-bacb-d9f2b2ba1905.PNG)
 
 
 ## Results :
@@ -142,18 +148,31 @@ This deliverable can be achieved by doing any or all of the following steps:
    
    
 #### B. Compiling, Training, and Evaluating the Model - 
-1. How many neurons, layers, and activation functions did you select for your neural network model, and why?
+##### 1. How many neurons, layers, and activation functions did you select for your neural network model, and why?
+In the original model. 2 hidden layers were used with 80 neurons in first layer and 30 neurons in 2nd layer. The activation layer used was relu.
 
-2. Were you able to achieve the target model performance?
+- For the first optimization, a third layer was added with 30 neurons. The accuracy loss was 0.690643 and the Accuracy was 0.5641982.
+![32](https://user-images.githubusercontent.com/23488019/158086666-4cb49dc9-2ebd-4781-9fdc-95c7a18360b2.PNG)
+ 
+ - For the second layer, three layers were used and 100, 50 and 50 neurons were used in respective order. The loss was 0.700327932 and the accuracy was 0.53422743. The activation layer was changed to sigmoid.
+![34](https://user-images.githubusercontent.com/23488019/158086745-99fedd5f-aa70-4871-8b16-194934d527be.PNG)
 
+- For the third one, a 4th layer was added and the activation layer was changed to relu. Neurons were 250, 100, 75 and 120 in their respective layers. The loss was 0.9590622782 and the accuracy was 0.42763847.
 
-3. What steps did you take to try and increase model performance?
+![36](https://user-images.githubusercontent.com/23488019/158086760-6e480dff-3ada-4092-a537-6b9aee859b64.PNG)
 
+##### 2. Were you able to achieve the target model performance?
+Inspite of changing the layers and adding and removing various neurons, the target model performance could not be achieved. 
+
+##### 3. What steps did you take to try and increase model performance?
+I tried to add additional layers and increase and decrease the number of neurons so that the target model performance could be achieved. However this attempt was not successful. 
 
 ## Summary
-Summarize the overall results of the deep learning model. Include a recommendation for how a different model could solve this classification problem, and explain your recommendation.
+Hence by applying the deep nearning machine model we tried to achieve the target model performance. However it could not be achieved in this attempt. we tried changing a number of neurons used in the model as well as ading various layers. We also tried switching relu with sigmoid and vice versa. Summarize the overall results of the deep learning model. 
+
+Recommendation - After performing 3 different changes to the model, it was noted that, by further changing the layers and the neurons, the desired target performance model may be achieved. we might have to change the activation layer model as well as change the neurons used in the model. Other than that, we can also use Random Forest Classifier for as an alternate model. we can do so because it has th eability to perform binary classification and handle large data sets. There is more probability of getting accurate results.  
 
 
 ## References
 1. https://courses.bootcampspot.com/courses/791/pages/19-dot-1-1-what-is-a-neural-network?module_item_id=303929
-2. 
+
